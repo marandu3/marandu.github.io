@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="icon.png" type="image/png">
+        <title>HOME</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 0px;
+                background-image: url('jangwajan.jpeg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100vh;
+            }
+
+            nav {
+                width: 100%;
+                background-color: #333;
+            }
+
+            nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav {
+                margin: 0 15px;
+            }
+
+            nav{
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+            }
+
+            form {
+                display: flex;
+                float:center;
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                background-color: rgba(97, 20, 20, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                width: 400px;
+                color: white;
+            }
+
+            label {
+                margin: 10px 0 5px;
+            }
+
+            input, select {
+                margin-bottom: 10px;
+                padding: 5px;
+                width: 95%;
+                align-self: center;
+            }
+
+            input[type="radio"] {
+                margin: 0 10px;
+            }
+
+            .radio-group {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 90%;
+                align-self:center;
+            }
+
+            button {
+                padding: 10px 20px;
+                background-color: #333;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #555;
+            }
+            table{
+                text-align:center;
+                width:100%;
+            }
+            a{
+                text-decoration:none;
+                cursor: pointer;
+                color:white;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <nav>
+            <table>
+                <tr>
+                  <td><a href="home.html">HOME</a></td>
+                  <td><a href="about.html">ABOUT</a></td>
+                  <td><a href="registration.html">ONLINE REGISTRATION</a></td>
+                  <td><a href="courses.html">COURSES</a></td>
+                  <td><a href="library.html">LIBRARY</a></td>
+                </tr>
+            </table>
+        </nav>
+
+        <form id="form1" action="conn.php" method="post" autocomplete="off">
+            <label for="fname">FIRSTNAME:</label>
+            <input type="text" id="fname" name="fname"  value="" placeholder="firstname" required>
+            
+            <label for="sname">SURNAME:</label>
+            <input type="text" id="sname" name="sname" placeholder="surname" value="" required>
+            
+            <label>SEX:</label>
+            <div class="radio-group">
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="sex" value="female">
+            </div>
+            
+            <label for="age">AGE:</label>
+            <input type="number" id="age" name="age"  value="" placeholder="age">
+            
+            <label for="course">COURSE:</label>
+            <input name="course" list="courses" placeholder="course">
+            <datalist id="courses">
+                <option value="Computer Engineering and Information Technology 4 yrs">
+                <option value="Computer Science 3 yrs">
+                <option value="Business Information Technology 3 yrs">
+                <option value="Telecommunication Engineering 4 yrs">
+                <option value="Electronics Engineering 4 yrs">
+                <option value="Electronics Science 3 yrs">
+            </datalist>
+            
+            <button type="submit">Submit</button><br>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
+ 
